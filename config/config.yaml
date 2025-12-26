@@ -86,7 +86,7 @@ notification:
   feishu_batch_size: 30000 # 飞书消息分批大小（字节）
   bark_batch_size: 4000 # Bark消息分批大小（字节）
   slack_batch_size: 4000 # Slack消息分批大小（字节）
-  batch_send_interval: 3 # 批次发送间隔（秒）
+  batch_send_interval: 10 # 批次发送间隔（秒）
   feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # feishu 消息分割线
   max_accounts_per_channel: 3 # 每个渠道最大账号数量，建议不超过 3
 
@@ -96,7 +96,7 @@ notification:
   #   - 只想在工作日白天接收推送（如 09:00-18:00）
   #   - 希望在晚上固定时间收到汇总（如 20:00-22:00）
   push_window:
-    enabled: true  # 是否启用推送时间窗口控制，默认关闭
+    enabled: false  # 是否启用推送时间窗口控制，默认关闭
     # 注意：GitHub Actions 执行时间不稳定，时间范围建议至少留足 2 小时
     # 如果想要精准的定时推送，建议使用 Docker 部署在个人服务器上
     time_range:
